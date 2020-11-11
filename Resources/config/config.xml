@@ -43,4 +43,65 @@
             <helpText lang="de-DE">Der Text, der im Zustimmungs-Button angezeigt wird.</helpText>
         </input-field>
     </card>
+
+    <card>
+        <title>Banner</title>
+        <title lang="de-DE">Banner</title>
+        <name>banner</name>
+
+        <input-field type="checkbox">
+            <name>showBanner</name>
+            <required>true</required>
+            <label>Show banner</label>
+            <label lang="de-DE">Banner sichtbar</label>
+            <helpText>The banner is only visible if this setting is checked.</helpText>
+            <helpText lang="de-DE">Der Banner ist nur sichtbar wenn diese Einstellung angehakt ist.</helpText>
+        </input-field>
+
+        <input-field type="text">
+            <name>bannerText</name>
+            <required>true</required>
+            <label>Text</label>
+            <label lang="de-DE">Text</label>
+            <helpText>The text that should be displayed in the banner.</helpText>
+            <helpText lang="de-DE">Der Text, der im Banner dargestellt werden soll.</helpText>
+        </input-field>
+
+        <input-field type="bool">
+            <name>bannerClosable</name>
+            <required>true</required>
+            <label>Closable</label>
+            <label lang="de-DE">Wegklickbar</label>
+            <helpText>Determines if the banner can be closed.</helpText>
+            <helpText lang="de-DE">Bestimmt ob der Banner geschlossen werden kann.</helpText>
+        </input-field>
+
+        <input-field type="colorpicker">
+            <name>bannerBackgroundColor</name>
+            <required>true</required>
+            <label>Background color</label>
+            <label lang="de-DE">Hintergrundfarbe</label>
+            <helpText>The background color of the banner</helpText>
+            <helpText lang="de-DE">Die Hintergrundfarbe des Banners.</helpText>
+        </input-field>
+
+        <input-field type="colorpicker">
+            <name>bannerFontColor</name>
+            <required>true</required>
+            <label>Font color</label>
+            <label lang="de-DE">Schriftfarbe</label>
+            <helpText>The font color of the banner</helpText>
+            <helpText lang="de-DE">Die Schriftfarbe des Banners.</helpText>
+        </input-field>
+
+        <input-field type="checkbox">
+            <name>bannerMarquee</name>
+            <required>false</required>
+            <defaultValue>false</defaultValue>
+            <label>Display as marquee</label>
+            <label lang="de-DE">Als Laufschrift anzeigen</label>
+            <helpText>Determines if the text is displayed as marquee</helpText>
+            <helpText lang="de-DE">Bestimmt ob der Text in Laufschrift angezeigt wird.</helpText>
+        </input-field>
+    </card>
 </config>

@@ -1,6 +1,14 @@
 {% sw_extends '@Storefront/storefront/base.html.twig' %}
 {% set consentCookieKey = 'sw-consent-manager-accepted' %}
 
+{% block base_header %}
+    {% if shopware.config.swCustomNotification.config.showBanner %}
+        {% sw_include '@swCustomNotification/storefront/layout/header/banner.html.twig' %}
+    {% endif %}
+
+    {{ parent() }}
+{% endblock %}
+
 {% block base_main %}
     {%
         if shopware.config.swCustomNotification.config.showConsentPopup
