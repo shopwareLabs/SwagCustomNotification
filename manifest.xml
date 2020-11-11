@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<manifest xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+          xsi:noNamespaceSchemaLocation="https://raw.githubusercontent.com/shopware/platform/master/src/Core/Framework/App/Manifest/Schema/manifest-1.0.xsd">
+    <meta>
+        <name>swCustomNotification</name>
+        <label>Custom Popups & Notification</label>
+        <label lang="de-DE">Anpassbare Popus & Benachrichtigungen</label>
+        <description>Create customizable popups and notification to be displayed in the storefront.</description>
+        <description lang="de-DE">Erstelle anpassbare Popups und Benachrichtigungen, die in der Storefront ausgespielt werden</description>
+        <author>shopware AG</author>
+        <copyright>(c) by shopware AG</copyright>
+        <version>1.0.0</version>
+        <license>MIT</license>
+    </meta>
+</manifest>
