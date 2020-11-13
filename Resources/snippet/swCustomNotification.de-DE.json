@@ -1,0 +1,11 @@
+{
+    "swCustomNotification": {
+        "consentModal": {
+            "textDescriptionDefault": "Um diese Seite zu besuchen, musst Du mindestens 18 Jahre alt sein!",
+            "textButtonDefault": "Ich bin 18+"
+        },
+        "newsletterPopup": {
+            "labelSubmit": "Für Newsletter anmelden"
+        }
+    }
+}
