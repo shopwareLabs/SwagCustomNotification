@@ -1,0 +1,11 @@
+.sw-custom-notification-info-modal__content {
+
+  img {
+    width: 250px;
+    padding: 0 0 20px 0;
+
+    @include media-breakpoint-up(sm) {
+      padding: 0 10px 0 0;
+    }
+  }
+}

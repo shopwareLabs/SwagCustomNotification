@@ -1,0 +1,55 @@
+{% set infoModalOptions = {
+    title: '',
+    description: '',
+    blurBackground: false,
+    image: ''
+} %}
+
+{% if not shopware.config.swCustomNotification.config.infoTitle is empty %}
+    {% set infoModalOptions = infoModalOptions|merge({
+        'title': shopware.config.swCustomNotification.config.infoTitle
+    }) %}
+{% endif %}
+
+{% if not shopware.config.swCustomNotification.config.infoText is empty %}
+    {% set infoModalOptions = infoModalOptions|merge({
+        'description': shopware.config.swCustomNotification.config.infoText
+    }) %}
+{% endif %}
+
+{% if not shopware.config.swCustomNotification.config.infoBlurBackground is empty %}
+    {% set infoModalOptions = infoModalOptions|merge({
+        'blurBackground': shopware.config.swCustomNotification.config.infoBlurBackground
+    }) %}
+{% endif %}
+
+{% if not shopware.config.swCustomNotification.config.infoImage is empty %}
+    {% set imageId = shopware.config.swCustomNotification.config.infoImage %}
+    {% set mediaCollection = searchMedia([imageId], context.context) %}
+    {% set image = mediaCollection.get(imageId) %}
+
+    {% set infoModalOptions = infoModalOptions|merge({
+        'image': image.url
+    }) %}
+{% endif %}
+
+<div
+    class="sw-custom-notification-info-modal"
+    data-info-modal-plugin
+    data-info-modal-plugin-options="{{ infoModalOptions|json_encode }}"
+    hidden
+>
+    <div class="sw-custom-notification-info-modal__content row">
+        <div class="row">
+            {% if not infoModalOptions.image is empty %}
+                <div class="col-md-6">
+                    <img src="{{ infoModalOptions.image }}">
+                </div>
+            {% endif %}
+            <div {% if not infoModalOptions.image is empty %} class="col-md-6" {% endif %}>
+                <h3>{{ infoModalOptions.title }}</h3>
+                <p>{{ infoModalOptions.description }}</p>
+            </div>
+        </div>
+    </div>
+</div>

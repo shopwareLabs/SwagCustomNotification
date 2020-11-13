@@ -19,3 +19,12 @@
         {{ parent() }}
     {% endif %}
 {% endblock %}
+
+
+{% block base_pseudo_modal %}
+    {{ parent() }}
+
+    {% if shopware.config.swCustomNotification.config.showInfoPopup %}
+        {% sw_include '@swCustomNotification/storefront/layout/modal/info.html.twig' %}
+    {% endif %}
+{% endblock %}

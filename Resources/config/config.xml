@@ -104,4 +104,53 @@
             <helpText lang="de-DE">Bestimmt ob der Text in Laufschrift angezeigt wird.</helpText>
         </input-field>
     </card>
+
+    <card>
+        <title>Info Popup</title>
+        <title lang="de-DE">Info-Popup</title>
+        <name>Info popup</name>
+
+        <input-field type="bool">
+            <name>showInfoPopup</name>
+            <required>true</required>
+            <label>Show Info Popup</label>
+            <label lang="de-DE">Info-Popup anzeigen</label>
+            <helpText>Show an informational popup to shop visitors.</helpText>
+            <helpText lang="de-DE">Zeige Shop-Besuchern ein Popup mit Informationen an.</helpText>
+        </input-field>
+
+        <input-field type="bool">
+            <name>infoBlurBackground</name>
+            <required>false</required>
+            <label>Blur popup background</label>
+            <label lang="de-DE">Popup-Hintergrund ausblenden</label>
+        </input-field>
+
+        <input-field type="text">
+            <name>infoTitle</name>
+            <required>true</required>
+            <label>Popup title</label>
+            <label lang="de-DE">Popup-Titel</label>
+            <helptext>Title displayed in the popup.</helptext>
+            <helptext lang="de-DE">Titel, welcher im Popup angezeigt wird.,</helptext>
+        </input-field>
+
+        <component name="sw-text-editor">
+            <name>infoText</name>
+            <required>true</required>
+            <label>Popup text</label>
+            <label lang="de-DE">Popup-Text</label>
+            <helptext>Text displayed in the popup.</helptext>
+            <helptext lang="de-DE">Text, welcher im Popup angezeigt wird.,</helptext>
+        </component>
+
+        <component name="sw-media-field">
+            <name>infoImage</name>
+            <required>false</required>
+            <label>Popup image</label>
+            <label lang="de-DE">Popup-Bild</label>
+            <helptext>Image displayed in the left half of the popup.</helptext>
+            <helptext lang="de-DE">Bild, welches in der linken Popup-Hälfte angezeigt wird.</helptext>
+        </component>
+    </card>
 </config>

@@ -1,0 +1,14 @@
+.sw-custom-notification__modal {
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+
+  .modal-content {
+    padding: 0 10px;
+
+
+    @include media-breakpoint-up(sm) {
+      padding: 20px;
+    }
+  }
+}
