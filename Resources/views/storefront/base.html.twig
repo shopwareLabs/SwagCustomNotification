@@ -17,6 +17,10 @@
         {% sw_include '@swCustomNotification/storefront/layout/modal/consent.html.twig' %}
     {% else %}
         {{ parent() }}
+
+        {% if shopware.config.swCustomNotification.config.showNewsletter %}
+            {% sw_include '@swCustomNotification/storefront/layout/modal/newsletter-popup.html.twig' %}
+        {% endif %}
     {% endif %}
 {% endblock %}
 

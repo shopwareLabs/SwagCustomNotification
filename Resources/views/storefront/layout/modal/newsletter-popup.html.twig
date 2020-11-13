@@ -1,0 +1,81 @@
+<div class="modal show fade sw-custom-notifications-newsletter-popup" tabindex="-1" role="dialog" data-open-modal-on-load="true">
+    <div class="modal-dialog modal-dialog-centered" role="document">
+        <div class="modal-content cms-element-form">
+            <div class="modal-header">
+                <h5 class="modal-title">
+                    {{ shopware.config.swCustomNotification.config.newsletterHeading }}
+                </h5>
+
+                <button class="close"
+                        type="button"
+                        data-dismiss="modal"
+                        aria-label="Close">
+                    {% sw_icon 'x' %}
+                </button>
+            </div>
+
+            <div class="cms-block cms-block-form">
+                <form action="{{ path('frontend.form.newsletter.register.handle') }}"
+                      method="post"
+                      data-form-csrf-handler="true"
+                      data-form-validation="true">
+                    <div class="modal-body form-content">
+                        <p>{{ shopware.config.swCustomNotification.config.newsletterText }}</p>
+
+                        <div class="form-content">
+                            <div class="form-row">
+                                {% sw_include '@Storefront/storefront/element/cms-element-form/form-components/cms-element-form-input.html.twig'
+                                    with {
+                                    fieldName: 'email',
+                                    type: 'email',
+                                    required: true,
+                                    additionalClass: 'col-12',
+                                    label: 'newsletter.labelMail',
+                                    placeholder: 'newsletter.placeholderMail'
+                                }
+                                %}
+                            </div>
+
+                            {% if shopware.config.swCustomNotification.config.newsletterShowNameInput %}
+                                <div class="form-row">
+                                    {% sw_include '@Storefront/storefront/element/cms-element-form/form-components/cms-element-form-input.html.twig'
+                                        with {
+                                        fieldName: 'firstName',
+                                        additionalClass: 'col-md-6',
+                                        label: 'newsletter.labelFirstName',
+                                        placeholder: 'newsletter.placeholderFirstName'
+                                    }
+                                    %}
+
+                                    {% sw_include '@Storefront/storefront/element/cms-element-form/form-components/cms-element-form-input.html.twig'
+                                        with {
+                                        fieldName: 'lastName',
+                                        additionalClass: 'col-md-6',
+                                        label: 'newsletter.labelLastName',
+                                        placeholder: 'newsletter.placeholderLastName'
+                                    }
+                                    %}
+                                </div>
+                            {% endif %}
+
+                            {% sw_include '@Storefront/storefront/component/captcha/base.html.twig' with { 'captchas': shopware.config.core.basicInformation.activeCaptchas } %}
+                            {% sw_include '@Storefront/storefront/element/cms-element-form/form-components/cms-element-form-privacy.html.twig' %}
+                            {% sw_include '@Storefront/storefront/element/cms-element-form/form-components/cms-element-form-info-required.html.twig' %}
+
+                            <input type="hidden" name="option" value="{{ constant('Shopware\\Storefront\\Controller\\FormController::SUBSCRIBE') }}">
+                            {{ sw_csrf('frontend.form.newsletter.register.handle') }}
+                            <input type="submit" class="submit--hidden d-none" />
+                        </div>
+
+                        <div class="modal-footer">
+                            <button type="submit"
+                                    class="btn btn-primary">
+                                {{ "swCustomNotification.newsletterPopup.labelSubmit"|trans }}
+                            </button>
+                        </div>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
+</div>

@@ -1,0 +1,8 @@
+.sw-custom-notifications-newsletter-popup {
+    $confirm-message-padding: 0.625rem;
+
+    .confirm-message {
+        padding: $confirm-message-padding;
+        font-size: $font-size-base;
+    }
+}
