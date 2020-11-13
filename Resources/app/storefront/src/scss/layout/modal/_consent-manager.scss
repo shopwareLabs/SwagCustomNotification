@@ -1,0 +1,47 @@
+.sw-custom-notification-consent-modal {
+  $modal-zIndex: 1200;
+  $modal-max-width: 400px;
+  $modal-mobile-width: 90%;
+  $modal-background: #fff;
+  $modal-backdrop-color: #000;
+
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  z-index: $modal-zIndex;
+
+  &__backdrop {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: $modal-backdrop-color;
+  }
+
+  &__content {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    z-index: $modal-zIndex + 1;
+    background: $modal-background;
+    padding: 12px;
+    border-radius: 3px;
+
+    @include media-breakpoint-down(sm) {
+      width: $modal-mobile-width;
+    }
+
+    @include media-breakpoint-up(sm) {
+      max-width: $modal-max-width;
+    }
+  }
+
+  &__consent {
+    margin-top: 40px;
+    text-align: right;
+  }
+}

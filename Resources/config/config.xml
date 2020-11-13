@@ -3,18 +3,44 @@
         xsi:noNamespaceSchemaLocation="https://raw.githubusercontent.com/shopware/platform/master/src/Core/System/SystemConfig/Schema/config.xsd">
 
     <card>
-        <title>Banner</title>
-        <title lang="de-DE">Banner</title>
-        <name>banner</name>
-        <!--Configuration for banners go here-->
+        <title>Consent Popup</title>
+        <title lang="de-DE">Zustimmungs-Popup</title>
+        <name>Consent popup</name>
 
-    </card>
+        <input-field type="bool">
+            <name>showConsentPopup</name>
+            <required>true</required>
+            <label>Show Consent Modal</label>
+            <label lang="de-DE">Zustimmungs-Dialog anzeigen</label>
+            <helpText>The consent popup only is visible, if this setting is checked. Users can only visit the shop after they agreed to it.</helpText>
+            <helpText lang="de-DE">Der Zustimmungs-Dialog ist nur sichtbar, wenn diese Einstellung angehakt ist. Nutzer können den Shop nur besuchen, wenn sie diesem zugestimmt haben.</helpText>
+        </input-field>
 
-    <card>
-        <title>Popup notification</title>
-        <title lang="de-DE">Popup Benachrichtigung</title>
-        <name>popup</name>
-        <!--Configuration for popup go here-->
+        <input-field type="text">
+            <name>consentTitle</name>
+            <required>false</required>
+            <label>Title</label>
+            <label lang="de-DE">Titel</label>
+            <helpText>Title of the consent popup.</helpText>
+            <helpText lang="de-DE">Titel des Zustimmung-Dialogs.</helpText>
+        </input-field>
 
+        <input-field type="text">
+            <name>consentDescription</name>
+            <required>false</required>
+            <label>Description</label>
+            <label lang="de-DE">Beschreibung</label>
+            <helpText>The text that should be displayed in the consent popup.</helpText>
+            <helpText lang="de-DE">Der Text, der im Zustimmungs-Dialog angezeigt wird.</helpText>
+        </input-field>
+
+        <input-field type="text">
+            <name>consentButton</name>
+            <required>false</required>
+            <label>Button</label>
+            <label lang="de-DE">Button</label>
+            <helpText>The text that should be displayed in the consent button.</helpText>
+            <helpText lang="de-DE">Der Text, der im Zustimmungs-Button angezeigt wird.</helpText>
+        </input-field>
     </card>
 </config>

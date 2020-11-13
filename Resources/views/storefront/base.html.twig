@@ -1,0 +1,13 @@
+{% sw_extends '@Storefront/storefront/base.html.twig' %}
+{% set consentCookieKey = 'sw-consent-manager-accepted' %}
+
+{% block base_main %}
+    {%
+        if shopware.config.swCustomNotification.config.showConsentPopup
+        and not app.request.cookies.get(consentCookieKey)
+    %}
+        {% sw_include '@swCustomNotification/storefront/layout/modal/consent.html.twig' %}
+    {% else %}
+        {{ parent() }}
+    {% endif %}
+{% endblock %}
