@@ -1,10 +1,20 @@
 {
     "swCustomNotification": {
-        "consentModal": {
-            "textDescriptionDefault": "To view this page, you have to be at least 18 years old!",
-            "textButtonDefault": "I am 18+"
+        "consentPopup": {
+            "title": "Age verification",
+            "description": "To view this page, you have to be at least 18 years old!",
+            "labelConsentButton": "I am 18+"
+        },
+        "banner": {
+            "text": "See whats new!"
+        },
+        "infoPopup": {
+            "title": "New for you",
+            "text": "We opened up our new online store."
         },
         "newsletterPopup": {
+            "heading": "Subscribe to newsletter",
+            "text": "Don't miss a beat and stay up to date what's happening.",
             "labelSubmit": "Subscribe to newsletter"
         }
     }

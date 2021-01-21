@@ -1,41 +1,17 @@
-{% set consentManagerOptions = {
-    title: '',
-    description: 'swCustomNotification.consentModal.textDescriptionDefault'|trans,
-    button: 'swCustomNotification.consentModal.textButtonDefault'|trans
-} %}
-
-{% if not shopware.config.swCustomNotification.config.consentDescription is empty %}
-    {% set consentManagerOptions = consentManagerOptions|merge({
-        'description': shopware.config.swCustomNotification.config.consentDescription
-    }) %}
-{% endif %}
-
-{% if not shopware.config.swCustomNotification.config.consentButton is empty %}
-    {% set consentManagerOptions = consentManagerOptions|merge({
-        'button': shopware.config.swCustomNotification.config.consentButton
-    }) %}
-{% endif %}
-
-{% if not shopware.config.swCustomNotification.config.consentTitle is empty %}
-    {% set consentManagerOptions = consentManagerOptions|merge({
-        'title': shopware.config.swCustomNotification.config.consentTitle
-    }) %}
-{% endif %}
-
 <div
     class="sw-custom-notification-consent-modal"
     data-consent-manager-plugin
 >
     <div class="sw-custom-notification-consent-modal__backdrop"></div>
     <div class="sw-custom-notification-consent-modal__content">
-        {% if not consentManagerOptions.title is empty %}
-            <h1>{{ consentManagerOptions.title }}</h1>
+        {% if not 'swCustomNotification.consentPopup.title'|trans is empty %}
+            <h3>{{ 'swCustomNotification.consentPopup.title'|trans }}</h3>
         {% endif %}
-        <p>{{ consentManagerOptions.description }}</p>
+        <p>{{ 'swCustomNotification.consentPopup.description'|trans }}</p>
 
         <div class="sw-custom-notification-consent-modal__consent">
             <button class="btn btn-primary sw-custom-notification-consent-modal__consent-button">
-                {{ consentManagerOptions.button }}
+                {{ 'swCustomNotification.consentPopup.labelConsentButton'|trans }}
             </button>
         </div>
     </div>

@@ -16,32 +16,33 @@
             <helpText lang="de-DE">Der Zustimmungs-Dialog ist nur sichtbar, wenn diese Einstellung angehakt ist. Nutzer können den Shop nur besuchen, wenn sie diesem zugestimmt haben.</helpText>
         </input-field>
 
-        <input-field type="text">
+        <component name="sw-snippet-field">
             <name>consentTitle</name>
-            <required>false</required>
             <label>Title</label>
             <label lang="de-DE">Titel</label>
             <helpText>Title of the consent popup.</helpText>
             <helpText lang="de-DE">Titel des Zustimmung-Dialogs.</helpText>
-        </input-field>
+            <snippet>swCustomNotification.consentPopup.title</snippet>
+        </component>
 
-        <input-field type="text">
+        <component name="sw-snippet-field">
             <name>consentDescription</name>
-            <required>false</required>
             <label>Description</label>
             <label lang="de-DE">Beschreibung</label>
             <helpText>The text that should be displayed in the consent popup.</helpText>
             <helpText lang="de-DE">Der Text, der im Zustimmungs-Dialog angezeigt wird.</helpText>
-        </input-field>
+            <snippet>swCustomNotification.consentPopup.description</snippet>
+            <fieldType>textarea</fieldType>
+        </component>
 
-        <input-field type="text">
+        <component name="sw-snippet-field">
             <name>consentButton</name>
-            <required>false</required>
-            <label>Button</label>
-            <label lang="de-DE">Button</label>
+            <label>Button label</label>
+            <label lang="de-DE">Button-Text</label>
             <helpText>The text that should be displayed in the consent button.</helpText>
             <helpText lang="de-DE">Der Text, der im Zustimmungs-Button angezeigt wird.</helpText>
-        </input-field>
+            <snippet>swCustomNotification.consentPopup.labelConsentButton</snippet>
+        </component>
     </card>
 
     <card>
@@ -49,22 +50,13 @@
         <title lang="de-DE">Banner</title>
         <name>banner</name>
 
-        <input-field type="checkbox">
+        <input-field type="bool">
             <name>showBanner</name>
             <required>true</required>
             <label>Show banner</label>
             <label lang="de-DE">Banner sichtbar</label>
             <helpText>The banner is only visible if this setting is checked.</helpText>
             <helpText lang="de-DE">Der Banner ist nur sichtbar wenn diese Einstellung angehakt ist.</helpText>
-        </input-field>
-
-        <input-field type="text">
-            <name>bannerText</name>
-            <required>true</required>
-            <label>Text</label>
-            <label lang="de-DE">Text</label>
-            <helpText>The text that should be displayed in the banner.</helpText>
-            <helpText lang="de-DE">Der Text, der im Banner dargestellt werden soll.</helpText>
         </input-field>
 
         <input-field type="bool">
@@ -94,7 +86,7 @@
             <helpText lang="de-DE">Die Schriftfarbe des Banners.</helpText>
         </input-field>
 
-        <input-field type="checkbox">
+        <input-field type="bool">
             <name>bannerMarquee</name>
             <required>false</required>
             <defaultValue>false</defaultValue>
@@ -103,6 +95,17 @@
             <helpText>Determines if the text is displayed as marquee</helpText>
             <helpText lang="de-DE">Bestimmt ob der Text in Laufschrift angezeigt wird.</helpText>
         </input-field>
+
+        <component name="sw-snippet-field">
+            <name>bannerText</name>
+            <required>true</required>
+            <label>Text</label>
+            <label lang="de-DE">Text</label>
+            <helpText>The text that should be displayed in the banner.</helpText>
+            <helpText lang="de-DE">Der Text, der im Banner dargestellt werden soll.</helpText>
+            <snippet>swCustomNotification.banner.text</snippet>
+            <fieldType>textarea</fieldType>
+        </component>
     </card>
 
     <card>
@@ -126,22 +129,25 @@
             <label lang="de-DE">Popup-Hintergrund ausblenden</label>
         </input-field>
 
-        <input-field type="text">
+        <component name="sw-snippet-field">
             <name>infoTitle</name>
             <required>true</required>
             <label>Popup title</label>
             <label lang="de-DE">Popup-Titel</label>
             <helptext>Title displayed in the popup.</helptext>
             <helptext lang="de-DE">Titel, welcher im Popup angezeigt wird.,</helptext>
-        </input-field>
+            <snippet>swCustomNotification.infoPopup.title</snippet>
+        </component>
 
-        <component name="sw-text-editor">
+        <component name="sw-snippet-field">
             <name>infoText</name>
             <required>true</required>
             <label>Popup text</label>
             <label lang="de-DE">Popup-Text</label>
             <helptext>Text displayed in the popup.</helptext>
             <helptext lang="de-DE">Text, welcher im Popup angezeigt wird.,</helptext>
+            <snippet>swCustomNotification.infoPopup.text</snippet>
+            <fieldType>textarea</fieldType>
         </component>
 
         <component name="sw-media-field">
@@ -159,31 +165,13 @@
         <title lang="de-DE">Newsletter-Registrierungs Popup </title>
         <name>newsletter</name>
 
-        <input-field type="checkbox">
+        <input-field type="bool">
             <name>showNewsletter</name>
             <required>true</required>
             <label>Show newsletter registration popup</label>
             <label lang="de-DE">Newsletter-Registrierungs Popup wird angezeigt.</label>
             <helpText>The newsetter registration popup is only visible if this setting is checked.</helpText>
             <helpText lang="de-DE">Das Newsletter-Registrierungs Popup ist nur sichtbar wenn diese Einstellung angehakt ist.</helpText>
-        </input-field>
-
-        <input-field type="text">
-            <name>newsletterHeading</name>
-            <required>true</required>
-            <label>Heading</label>
-            <label lang="de-DE">Überschrift</label>
-            <helpText>The heading of the newsletter registration popup.</helpText>
-            <helpText lang="de-DE">Die Überschrift des Newsletter-Registrierungs Popups.</helpText>
-        </input-field>
-
-        <input-field type="textarea">
-            <name>newsletterText</name>
-            <required>true</required>
-            <label>Text</label>
-            <label lang="de-DE">Text</label>
-            <helpText>The text that should be displayed inside the newsletter popup registration.</helpText>
-            <helpText lang="de-DE">Der Text, der im Newsletter-Registrierungs Popup dargestellt werden soll.</helpText>
         </input-field>
 
         <input-field type="bool">
@@ -195,5 +183,33 @@
             <helpText>Determines if input fields to enter first and last name should be shown.</helpText>
             <helpText lang="de-DE">Bestimmt ob Eingabefelder für den Vor- und Nachnamen angezeigt werden sollen.</helpText>
         </input-field>
+
+        <component name="sw-snippet-field">
+            <name>newsletterHeading</name>
+            <required>true</required>
+            <snippet>swCustomNotification.newsletterPopup.heading</snippet>
+            <label>Heading</label>
+            <label lang="de-DE">Überschrift</label>
+            <helpText>The heading of the newsletter registration popup.</helpText>
+            <helpText lang="de-DE">Die Überschrift des Newsletter-Registrierungs Popups.</helpText>
+        </component>
+
+        <component name="sw-snippet-field">
+            <name>newsletterText</name>
+            <required>true</required>
+            <snippet>swCustomNotification.newsletterPopup.text</snippet>
+            <label>Text</label>
+            <label lang="de-DE">Text</label>
+            <helpText>The text that should be displayed inside the newsletter popup registration.</helpText>
+            <helpText lang="de-DE">Der Text, der im Newsletter-Registrierungs Popup dargestellt werden soll.</helpText>
+        </component>
+
+        <component name="sw-snippet-field">
+            <name>newsletterSubmitButtonLabel</name>
+            <required>false</required>
+            <snippet>swCustomNotification.newsletterPopup.labelSubmit</snippet>
+            <label>Submit button text</label>
+            <label lang="de-DE">Registrierungs-Button Text</label>
+        </component>
     </card>
 </config>
