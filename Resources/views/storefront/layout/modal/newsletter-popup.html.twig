@@ -3,7 +3,7 @@
         <div class="modal-content cms-element-form">
             <div class="modal-header">
                 <h5 class="modal-title">
-                    {{ shopware.config.swCustomNotification.config.newsletterHeading }}
+                    {{ 'swCustomNotification.newsletterPopup.heading'|trans }}
                 </h5>
 
                 <button class="close"
@@ -20,7 +20,7 @@
                       data-form-csrf-handler="true"
                       data-form-validation="true">
                     <div class="modal-body form-content">
-                        <p>{{ shopware.config.swCustomNotification.config.newsletterText }}</p>
+                        <p>{{ 'swCustomNotification.newsletterPopup.text'|trans }}</p>
 
                         <div class="form-content">
                             <div class="form-row">
@@ -70,7 +70,7 @@
                         <div class="modal-footer">
                             <button type="submit"
                                     class="btn btn-primary">
-                                {{ "swCustomNotification.newsletterPopup.labelSubmit"|trans }}
+                                {{ 'swCustomNotification.newsletterPopup.labelSubmit'|trans }}
                             </button>
                         </div>
                     </div>

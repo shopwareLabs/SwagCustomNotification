@@ -3,7 +3,7 @@ import ModalHelper from './modal.helper';
 
 const KEY_MODAL_CLOSED_ONCE = 'sw-info-modal-once';
 
-export default class ConsentManagerPlugin extends Plugin {
+export default class InfoModalPlugin extends Plugin {
 
   static options = {
     blurBackground: true

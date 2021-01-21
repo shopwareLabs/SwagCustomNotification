@@ -7,11 +7,11 @@
 
     {% if shopware.config.swCustomNotification.config.bannerMarquee %}
         <marquee>
-            {{ shopware.config.swCustomNotification.config.bannerText }}
+            {{ 'swCustomNotification.banner.text'|trans }}
         </marquee>
     {% else %}
         <span class="sw-custom-notification-banner-text">
-            {{ shopware.config.swCustomNotification.config.bannerText }}
+            {{ 'swCustomNotification.banner.text'|trans }}
         </span>
     {% endif %}
 

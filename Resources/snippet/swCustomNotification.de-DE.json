@@ -1,10 +1,20 @@
 {
     "swCustomNotification": {
-        "consentModal": {
-            "textDescriptionDefault": "Um diese Seite zu besuchen, musst Du mindestens 18 Jahre alt sein!",
-            "textButtonDefault": "Ich bin 18+"
+        "consentPopup": {
+            "title": "Altersüberprüfung",
+            "description": "Um diese Seite zu besuchen, musst Du mindestens 18 Jahre alt sein!",
+            "labelConsentButton": "Ich bin 18+"
+        },
+        "banner": {
+            "text": "Entdecke Neuigkeiten!"
+        },
+        "infoPopup": {
+            "title": "Neuheiten für dich",
+            "text": "Wir haben einen neuen Online-Shop."
         },
         "newsletterPopup": {
+            "heading": "Für Newsletter anmelden",
+            "text": "Verpasse nichts mehr und bleibe stetig auf dem laufenden.",
             "labelSubmit": "Für Newsletter anmelden"
         }
     }
