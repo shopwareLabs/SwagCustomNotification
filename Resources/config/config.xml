@@ -125,6 +125,7 @@
         <input-field type="bool">
             <name>infoBlurBackground</name>
             <required>false</required>
+            <defaultValue>true</defaultValue>
             <label>Blur popup background</label>
             <label lang="de-DE">Popup-Hintergrund ausblenden</label>
         </input-field>

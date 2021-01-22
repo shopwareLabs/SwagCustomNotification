@@ -12,8 +12,9 @@
 
 <div
     class="sw-custom-notification-info-modal"
-    data-info-modal-plugin
-    data-info-modal-plugin-options="{{ infoModalOptions|json_encode }}"
+    id="sw-custom-notification-info-modal"
+    data-notification-modal="true"
+    data-notification-modal-plugin-options="{{ infoModalOptions|json_encode }}"
     hidden
 >
     <div class="sw-custom-notification-info-modal__content">
@@ -23,7 +24,7 @@
                     <img src="{{ image.url }}">
                 </div>
             {% endif %}
-            <div {% if not image is null %} class="col-md-6" {% endif %}>
+            <div {% if not image is null %} class="col-md-6" {% else %} class="col-md-12" {% endif %}>
                 <h3>{{ 'swCustomNotification.infoPopup.title'|trans }}</h3>
                 <p>{{ 'swCustomNotification.infoPopup.text'|trans }}</p>
             </div>
