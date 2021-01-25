@@ -2,8 +2,8 @@
 {% set consentCookieKey = 'sw-consent-manager-accepted' %}
 
 {% block base_header %}
-    {% if shopware.config.swCustomNotification.config.showBanner %}
-        {% sw_include '@swCustomNotification/storefront/layout/header/banner.html.twig' %}
+    {% if shopware.config.SwagCustomNotification.config.showBanner %}
+        {% sw_include '@SwagCustomNotification/storefront/layout/header/banner.html.twig' %}
     {% endif %}
 
     {{ parent() }}
@@ -11,15 +11,15 @@
 
 {% block base_main %}
     {%
-        if shopware.config.swCustomNotification.config.showConsentPopup
+        if shopware.config.SwagCustomNotification.config.showConsentPopup
         and not app.request.cookies.get(consentCookieKey)
     %}
-        {% sw_include '@swCustomNotification/storefront/layout/modal/consent.html.twig' %}
+        {% sw_include '@SwagCustomNotification/storefront/layout/modal/consent.html.twig' %}
     {% else %}
         {{ parent() }}
 
-        {% if shopware.config.swCustomNotification.config.showNewsletter %}
-            {% sw_include '@swCustomNotification/storefront/layout/modal/newsletter-popup.html.twig' %}
+        {% if shopware.config.SwagCustomNotification.config.showNewsletter %}
+            {% sw_include '@SwagCustomNotification/storefront/layout/modal/newsletter-popup.html.twig' %}
         {% endif %}
     {% endif %}
 {% endblock %}
@@ -28,7 +28,7 @@
 {% block base_pseudo_modal %}
     {{ parent() }}
 
-    {% if shopware.config.swCustomNotification.config.showInfoPopup %}
-        {% sw_include '@swCustomNotification/storefront/layout/modal/info.html.twig' %}
+    {% if shopware.config.SwagCustomNotification.config.showInfoPopup %}
+        {% sw_include '@SwagCustomNotification/storefront/layout/modal/info.html.twig' %}
     {% endif %}
 {% endblock %}

@@ -1,10 +1,10 @@
-<div class="sw-custom-notifications-newsletter-popup"
-     id="sw-custom-notifications-newsletter-popup"
+<div class="swag-custom-notifications-newsletter-popup"
+     id="swag-custom-notifications-newsletter-popup"
      data-notification-modal="true"
      hidden>
-    <div class="sw-custom-notifications-newsletter-popup__content cms-element-form">
+    <div class="swag-custom-notifications-newsletter-popup__content cms-element-form">
         <h5 class="js-pseudo-modal-template-title-element">
-            {{ 'swCustomNotification.newsletterPopup.heading'|trans }}
+            {{ 'SwagCustomNotification.newsletterPopup.heading'|trans }}
         </h5>
 
         <div class="cms-block cms-block-form">
@@ -13,7 +13,7 @@
                   data-form-csrf-handler="true"
                   data-form-validation="true">
                 <div class="modal-body form-content">
-                    <p>{{ 'swCustomNotification.newsletterPopup.text'|trans }}</p>
+                    <p>{{ 'SwagCustomNotification.newsletterPopup.text'|trans }}</p>
 
                     <div class="form-content">
                         <div class="form-row">
@@ -29,7 +29,7 @@
                             %}
                         </div>
 
-                        {% if shopware.config.swCustomNotification.config.newsletterShowNameInput %}
+                        {% if shopware.config.SwagCustomNotification.config.newsletterShowNameInput %}
                             <div class="form-row">
                                 {% sw_include '@Storefront/storefront/element/cms-element-form/form-components/cms-element-form-input.html.twig'
                                     with {
@@ -63,7 +63,7 @@
                     <div class="modal-footer">
                         <button type="submit"
                                 class="btn btn-primary">
-                            {{ 'swCustomNotification.newsletterPopup.labelSubmit'|trans }}
+                            {{ 'SwagCustomNotification.newsletterPopup.labelSubmit'|trans }}
                         </button>
                     </div>
                 </div>

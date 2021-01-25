@@ -22,7 +22,7 @@
             <label lang="de-DE">Titel</label>
             <helpText>Title of the consent popup.</helpText>
             <helpText lang="de-DE">Titel des Zustimmung-Dialogs.</helpText>
-            <snippet>swCustomNotification.consentPopup.title</snippet>
+            <snippet>SwagCustomNotification.consentPopup.title</snippet>
         </component>
 
         <component name="sw-snippet-field">
@@ -31,7 +31,7 @@
             <label lang="de-DE">Beschreibung</label>
             <helpText>The text that should be displayed in the consent popup.</helpText>
             <helpText lang="de-DE">Der Text, der im Zustimmungs-Dialog angezeigt wird.</helpText>
-            <snippet>swCustomNotification.consentPopup.description</snippet>
+            <snippet>SwagCustomNotification.consentPopup.description</snippet>
             <fieldType>textarea</fieldType>
         </component>
 
@@ -41,7 +41,7 @@
             <label lang="de-DE">Button-Text</label>
             <helpText>The text that should be displayed in the consent button.</helpText>
             <helpText lang="de-DE">Der Text, der im Zustimmungs-Button angezeigt wird.</helpText>
-            <snippet>swCustomNotification.consentPopup.labelConsentButton</snippet>
+            <snippet>SwagCustomNotification.consentPopup.labelConsentButton</snippet>
         </component>
     </card>
 
@@ -103,7 +103,7 @@
             <label lang="de-DE">Text</label>
             <helpText>The text that should be displayed in the banner.</helpText>
             <helpText lang="de-DE">Der Text, der im Banner dargestellt werden soll.</helpText>
-            <snippet>swCustomNotification.banner.text</snippet>
+            <snippet>SwagCustomNotification.banner.text</snippet>
             <fieldType>textarea</fieldType>
         </component>
     </card>
@@ -137,7 +137,7 @@
             <label lang="de-DE">Popup-Titel</label>
             <helptext>Title displayed in the popup.</helptext>
             <helptext lang="de-DE">Titel, welcher im Popup angezeigt wird.,</helptext>
-            <snippet>swCustomNotification.infoPopup.title</snippet>
+            <snippet>SwagCustomNotification.infoPopup.title</snippet>
         </component>
 
         <component name="sw-snippet-field">
@@ -147,7 +147,7 @@
             <label lang="de-DE">Popup-Text</label>
             <helptext>Text displayed in the popup.</helptext>
             <helptext lang="de-DE">Text, welcher im Popup angezeigt wird.,</helptext>
-            <snippet>swCustomNotification.infoPopup.text</snippet>
+            <snippet>SwagCustomNotification.infoPopup.text</snippet>
             <fieldType>textarea</fieldType>
         </component>
 
@@ -188,7 +188,7 @@
         <component name="sw-snippet-field">
             <name>newsletterHeading</name>
             <required>true</required>
-            <snippet>swCustomNotification.newsletterPopup.heading</snippet>
+            <snippet>SwagCustomNotification.newsletterPopup.heading</snippet>
             <label>Heading</label>
             <label lang="de-DE">Überschrift</label>
             <helpText>The heading of the newsletter registration popup.</helpText>
@@ -198,7 +198,7 @@
         <component name="sw-snippet-field">
             <name>newsletterText</name>
             <required>true</required>
-            <snippet>swCustomNotification.newsletterPopup.text</snippet>
+            <snippet>SwagCustomNotification.newsletterPopup.text</snippet>
             <label>Text</label>
             <label lang="de-DE">Text</label>
             <helpText>The text that should be displayed inside the newsletter popup registration.</helpText>
@@ -208,7 +208,7 @@
         <component name="sw-snippet-field">
             <name>newsletterSubmitButtonLabel</name>
             <required>false</required>
-            <snippet>swCustomNotification.newsletterPopup.labelSubmit</snippet>
+            <snippet>SwagCustomNotification.newsletterPopup.labelSubmit</snippet>
             <label>Submit button text</label>
             <label lang="de-DE">Registrierungs-Button Text</label>
         </component>

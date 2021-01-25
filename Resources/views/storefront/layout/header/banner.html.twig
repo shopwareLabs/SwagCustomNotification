@@ -1,24 +1,24 @@
-<div class="sw-custom-notification-banner"
+<div class="swag-custom-notification-banner"
      data-hide-on-click-container
      style="
-         background-color: {{ shopware.config.swCustomNotification.config.bannerBackgroundColor }};
-         color: {{ shopware.config.swCustomNotification.config.bannerFontColor }}
+         background-color: {{ shopware.config.SwagCustomNotification.config.bannerBackgroundColor }};
+         color: {{ shopware.config.swagCustomNotification.config.bannerFontColor }}
      ">
 
-    {% if shopware.config.swCustomNotification.config.bannerMarquee %}
+    {% if shopware.config.SwagCustomNotification.config.bannerMarquee %}
         <marquee>
-            {{ 'swCustomNotification.banner.text'|trans }}
+            {{ 'SwagCustomNotification.banner.text'|trans }}
         </marquee>
     {% else %}
-        <span class="sw-custom-notification-banner-text">
-            {{ 'swCustomNotification.banner.text'|trans }}
+        <span class="swag-custom-notification-banner-text">
+            {{ 'SwagCustomNotification.banner.text'|trans }}
         </span>
     {% endif %}
 
-    {% if shopware.config.swCustomNotification.config.bannerClosable %}
-        <span class="sw-custom-notification-banner-close-icon icon icon-x icon-xs"
+    {% if shopware.config.SwagCustomNotification.config.bannerClosable %}
+        <span class="swag-custom-notification-banner-close-icon icon icon-x icon-xs"
               data-hide-on-click-button
-              style="color: {{ shopware.config.swCustomNotification.config.bannerFontColor }};">
+              style="color: {{ shopware.config.SwagCustomNotification.config.bannerFontColor }};">
             {{ source('@Storefront/../app/storefront/dist/assets/icon/default/x.svg', ignore_missing = true) }}
         </span>
     {% endif %}
