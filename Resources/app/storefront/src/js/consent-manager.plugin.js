@@ -5,7 +5,7 @@ import DomAccess from 'src/helper/dom-access.helper';
 export default class ConsentManagerPlugin extends Plugin {
 
   static options = {
-    selector_btn_consent: '.sw-custom-notification-consent-modal__consent-button',
+    selector_btn_consent: '.swag-custom-notification-consent-modal__consent-button',
     class_no_scroll: 'no-scroll',
     cookie_key: 'sw-consent-manager-accepted',
     cookie_lifetime_days: 90,

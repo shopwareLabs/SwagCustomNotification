@@ -1,17 +1,17 @@
 <div
-    class="sw-custom-notification-consent-modal"
+    class="swag-custom-notification-consent-modal"
     data-consent-manager-plugin
 >
-    <div class="sw-custom-notification-consent-modal__backdrop"></div>
-    <div class="sw-custom-notification-consent-modal__content">
-        {% if not 'swCustomNotification.consentPopup.title'|trans is empty %}
-            <h3>{{ 'swCustomNotification.consentPopup.title'|trans }}</h3>
+    <div class="swag-custom-notification-consent-modal__backdrop"></div>
+    <div class="swag-custom-notification-consent-modal__content">
+        {% if not 'SwagCustomNotification.consentPopup.title'|trans is empty %}
+            <h3>{{ 'SwagCustomNotification.consentPopup.title'|trans }}</h3>
         {% endif %}
-        <p>{{ 'swCustomNotification.consentPopup.description'|trans }}</p>
+        <p>{{ 'SwagCustomNotification.consentPopup.description'|trans }}</p>
 
-        <div class="sw-custom-notification-consent-modal__consent">
-            <button class="btn btn-primary sw-custom-notification-consent-modal__consent-button">
-                {{ 'swCustomNotification.consentPopup.labelConsentButton'|trans }}
+        <div class="swag-custom-notification-consent-modal__consent">
+            <button class="btn btn-primary swag-custom-notification-consent-modal__consent-button">
+                {{ 'SwagCustomNotification.consentPopup.labelConsentButton'|trans }}
             </button>
         </div>
     </div>

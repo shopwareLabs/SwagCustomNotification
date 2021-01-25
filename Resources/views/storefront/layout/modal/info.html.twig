@@ -1,23 +1,23 @@
 {% set infoModalOptions = {
-    blurBackground: shopware.config.swCustomNotification.config.infoBlurBackground
+    blurBackground: shopware.config.SwagCustomNotification.config.infoBlurBackground
 } %}
 
 {% set image = null %}
 
-{% if not shopware.config.swCustomNotification.config.infoImage is empty %}
-    {% set imageId = shopware.config.swCustomNotification.config.infoImage %}
+{% if not shopware.config.SwagCustomNotification.config.infoImage is empty %}
+    {% set imageId = shopware.config.SwagCustomNotification.config.infoImage %}
     {% set mediaCollection = searchMedia([imageId], context.context) %}
     {% set image = mediaCollection.get(imageId) %}
 {% endif %}
 
 <div
-    class="sw-custom-notification-info-modal"
-    id="sw-custom-notification-info-modal"
+    class="swag-custom-notification-info-modal"
+    id="swag-custom-notification-info-modal"
     data-notification-modal="true"
     data-notification-modal-plugin-options="{{ infoModalOptions|json_encode }}"
     hidden
 >
-    <div class="sw-custom-notification-info-modal__content">
+    <div class="swag-custom-notification-info-modal__content">
         <div class="row">
             {% if not image is null %}
                 <div class="col-md-6">
@@ -25,8 +25,8 @@
                 </div>
             {% endif %}
             <div {% if not image is null %} class="col-md-6" {% else %} class="col-md-12" {% endif %}>
-                <h3>{{ 'swCustomNotification.infoPopup.title'|trans }}</h3>
-                <p>{{ 'swCustomNotification.infoPopup.text'|trans }}</p>
+                <h3>{{ 'SwagCustomNotification.infoPopup.title'|trans }}</h3>
+                <p>{{ 'SwagCustomNotification.infoPopup.text'|trans }}</p>
             </div>
         </div>
     </div>
