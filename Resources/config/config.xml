@@ -168,7 +168,6 @@
 
         <input-field type="bool">
             <name>showNewsletter</name>
-            <required>true</required>
             <label>Show newsletter registration popup</label>
             <label lang="de-DE">Newsletter-Registrierungs Popup wird angezeigt.</label>
             <helpText>The newsetter registration popup is only visible if this setting is checked.</helpText>
