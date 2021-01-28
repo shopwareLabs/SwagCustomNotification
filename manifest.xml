@@ -6,10 +6,11 @@
         <label>Custom Popups &amp; Notification</label>
         <label lang="de-DE">Anpassbare Popus &amp; Benachrichtigungen</label>
         <description>Create customizable popups and notification to be displayed in the storefront.</description>
-        <description lang="de-DE">Erstelle anpassbare Popups und Benachrichtigungen, die in der Storefront ausgespielt werden</description>
+        <description lang="de-DE">Erstelle anpassbare Popups und Benachrichtigungen, die in der Storefront ausgespielt werden.</description>
         <author>shopware AG</author>
         <copyright>(c) by shopware AG</copyright>
         <version>1.0.0</version>
+        <icon>icon.png</icon>
         <license>MIT</license>
     </meta>
 </manifest>
