@@ -10,17 +10,14 @@
 {% endblock %}
 
 {% block base_main %}
-    {%
-        if shopware.config.SwagCustomNotification.config.showConsentPopup
-        and not app.request.cookies.get(consentCookieKey)
-    %}
+    {% if shopware.config.SwagCustomNotification.config.showConsentPopup %}
         {% sw_include '@SwagCustomNotification/storefront/layout/modal/consent.html.twig' %}
-    {% else %}
-        {{ parent() }}
+    {% endif %}
 
-        {% if shopware.config.SwagCustomNotification.config.showNewsletter %}
-            {% sw_include '@SwagCustomNotification/storefront/layout/modal/newsletter-popup.html.twig' %}
-        {% endif %}
+    {{ parent() }}
+
+    {% if shopware.config.SwagCustomNotification.config.showNewsletter %}
+        {% sw_include '@SwagCustomNotification/storefront/layout/modal/newsletter-popup.html.twig' %}
     {% endif %}
 {% endblock %}
 

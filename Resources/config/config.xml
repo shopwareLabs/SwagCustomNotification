@@ -9,7 +9,6 @@
 
         <input-field type="bool">
             <name>showConsentPopup</name>
-            <required>true</required>
             <label>Show Consent Modal</label>
             <label lang="de-DE">Zustimmungs-Dialog anzeigen</label>
             <helpText>The consent popup only is visible, if this setting is checked. Users can only visit the shop after they agreed to it.</helpText>
@@ -52,25 +51,22 @@
 
         <input-field type="bool">
             <name>showBanner</name>
-            <required>true</required>
             <label>Show banner</label>
-            <label lang="de-DE">Banner sichtbar</label>
+            <label lang="de-DE">Banner anzeigen</label>
             <helpText>The banner is only visible if this setting is checked.</helpText>
             <helpText lang="de-DE">Der Banner ist nur sichtbar wenn diese Einstellung angehakt ist.</helpText>
         </input-field>
 
         <input-field type="bool">
             <name>bannerClosable</name>
-            <required>true</required>
-            <label>Closable</label>
-            <label lang="de-DE">Wegklickbar</label>
+            <label>Banner is closable</label>
+            <label lang="de-DE">Banner lässt sich schließen</label>
             <helpText>Determines if the banner can be closed.</helpText>
             <helpText lang="de-DE">Bestimmt ob der Banner geschlossen werden kann.</helpText>
         </input-field>
 
         <input-field type="colorpicker">
             <name>bannerBackgroundColor</name>
-            <required>true</required>
             <label>Background color</label>
             <label lang="de-DE">Hintergrundfarbe</label>
             <helpText>The background color of the banner</helpText>
@@ -79,7 +75,6 @@
 
         <input-field type="colorpicker">
             <name>bannerFontColor</name>
-            <required>true</required>
             <label>Font color</label>
             <label lang="de-DE">Schriftfarbe</label>
             <helpText>The font color of the banner</helpText>
@@ -88,7 +83,6 @@
 
         <input-field type="bool">
             <name>bannerMarquee</name>
-            <required>false</required>
             <defaultValue>false</defaultValue>
             <label>Display as marquee</label>
             <label lang="de-DE">Als Laufschrift anzeigen</label>
@@ -98,7 +92,6 @@
 
         <component name="sw-snippet-field">
             <name>bannerText</name>
-            <required>true</required>
             <label>Text</label>
             <label lang="de-DE">Text</label>
             <helpText>The text that should be displayed in the banner.</helpText>
@@ -115,7 +108,6 @@
 
         <input-field type="bool">
             <name>showInfoPopup</name>
-            <required>true</required>
             <label>Show Info Popup</label>
             <label lang="de-DE">Info-Popup anzeigen</label>
             <helpText>Show an informational popup to shop visitors.</helpText>
@@ -124,15 +116,13 @@
 
         <input-field type="bool">
             <name>infoBlurBackground</name>
-            <required>false</required>
             <defaultValue>true</defaultValue>
             <label>Blur popup background</label>
-            <label lang="de-DE">Popup-Hintergrund ausblenden</label>
+            <label lang="de-DE">Popup-Hintergrund verwischt anzeigen (Blur)</label>
         </input-field>
 
         <component name="sw-snippet-field">
             <name>infoTitle</name>
-            <required>true</required>
             <label>Popup title</label>
             <label lang="de-DE">Popup-Titel</label>
             <helptext>Title displayed in the popup.</helptext>
@@ -142,18 +132,16 @@
 
         <component name="sw-snippet-field">
             <name>infoText</name>
-            <required>true</required>
             <label>Popup text</label>
             <label lang="de-DE">Popup-Text</label>
             <helptext>Text displayed in the popup.</helptext>
-            <helptext lang="de-DE">Text, welcher im Popup angezeigt wird.,</helptext>
+            <helptext lang="de-DE">Text, welcher im Popup angezeigt wird.</helptext>
             <snippet>SwagCustomNotification.infoPopup.text</snippet>
             <fieldType>textarea</fieldType>
         </component>
 
         <component name="sw-media-field">
             <name>infoImage</name>
-            <required>false</required>
             <label>Popup image</label>
             <label lang="de-DE">Popup-Bild</label>
             <helptext>Image displayed in the left half of the popup.</helptext>
@@ -169,14 +157,13 @@
         <input-field type="bool">
             <name>showNewsletter</name>
             <label>Show newsletter registration popup</label>
-            <label lang="de-DE">Newsletter-Registrierungs Popup wird angezeigt.</label>
+            <label lang="de-DE">Newsletter-Registrierungs Popup anzeigen</label>
             <helpText>The newsetter registration popup is only visible if this setting is checked.</helpText>
             <helpText lang="de-DE">Das Newsletter-Registrierungs Popup ist nur sichtbar wenn diese Einstellung angehakt ist.</helpText>
         </input-field>
 
         <input-field type="bool">
             <name>newsletterShowNameInput</name>
-            <required>false</required>
             <defaultValue>false</defaultValue>
             <label>Show name input fields</label>
             <label lang="de-DE">Zeige Eingabefeld für den Namen</label>
@@ -186,7 +173,6 @@
 
         <component name="sw-snippet-field">
             <name>newsletterHeading</name>
-            <required>true</required>
             <snippet>SwagCustomNotification.newsletterPopup.heading</snippet>
             <label>Heading</label>
             <label lang="de-DE">Überschrift</label>
@@ -196,7 +182,6 @@
 
         <component name="sw-snippet-field">
             <name>newsletterText</name>
-            <required>true</required>
             <snippet>SwagCustomNotification.newsletterPopup.text</snippet>
             <label>Text</label>
             <label lang="de-DE">Text</label>
@@ -206,7 +191,6 @@
 
         <component name="sw-snippet-field">
             <name>newsletterSubmitButtonLabel</name>
-            <required>false</required>
             <snippet>SwagCustomNotification.newsletterPopup.labelSubmit</snippet>
             <label>Submit button text</label>
             <label lang="de-DE">Registrierungs-Button Text</label>
