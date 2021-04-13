@@ -1,11 +1,11 @@
 <div class="swag-custom-notification-banner"
      data-hide-on-click-container
      style="
-         background-color: {{ shopware.config.SwagCustomNotification.config.bannerBackgroundColor }};
-         color: {{ shopware.config.SwagCustomNotification.config.bannerFontColor }}
+         background-color: {{ config('SwagCustomNotification.config.bannerBackgroundColor') }};
+         color: {{ config('SwagCustomNotification.config.bannerFontColor') }}
      ">
 
-    {% if shopware.config.SwagCustomNotification.config.bannerMarquee %}
+    {% if config('SwagCustomNotification.config.bannerMarquee') %}
         <marquee>
             {{ 'SwagCustomNotification.banner.text'|trans }}
         </marquee>
@@ -15,10 +15,10 @@
         </span>
     {% endif %}
 
-    {% if shopware.config.SwagCustomNotification.config.bannerClosable %}
+    {% if config('SwagCustomNotification.config.bannerClosable') %}
         <span class="swag-custom-notification-banner-close-icon icon icon-x icon-xs"
               data-hide-on-click-button
-              style="color: {{ shopware.config.SwagCustomNotification.config.bannerFontColor }};">
+              style="color: {{ config('SwagCustomNotification.config.bannerFontColor') }};">
             {{ source('@Storefront/../app/storefront/dist/assets/icon/default/x.svg', ignore_missing = true) }}
         </span>
     {% endif %}

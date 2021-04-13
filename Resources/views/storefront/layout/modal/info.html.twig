@@ -1,11 +1,11 @@
 {% set infoModalOptions = {
-    blurBackground: shopware.config.SwagCustomNotification.config.infoBlurBackground
+    blurBackground: config('SwagCustomNotification.config.infoBlurBackground')
 } %}
 
 {% set image = null %}
 
-{% if not shopware.config.SwagCustomNotification.config.infoImage is empty %}
-    {% set imageId = shopware.config.SwagCustomNotification.config.infoImage %}
+{% if not config('SwagCustomNotification.config.infoImage') is empty %}
+    {% set imageId = config('SwagCustomNotification.config.infoImage') %}
     {% set mediaCollection = searchMedia([imageId], context.context) %}
     {% set image = mediaCollection.get(imageId) %}
 {% endif %}
