@@ -8,7 +8,11 @@ export default class HideOnClickPlugin extends Plugin {
     };
 
     init() {
-        this._hideButton = DomAccess.querySelector(this.el, this.options.hideOnClickButtonSelector);
+        this._hideButton = DomAccess.querySelector(this.el, this.options.hideOnClickButtonSelector, false);
+
+        if (!this._hideButton) {
+            return;
+        }
 
         this._registerEvents();
     }

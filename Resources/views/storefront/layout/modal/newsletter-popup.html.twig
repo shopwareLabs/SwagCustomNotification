@@ -29,7 +29,7 @@
                             %}
                         </div>
 
-                        {% if shopware.config.SwagCustomNotification.config.newsletterShowNameInput %}
+                        {% if config('SwagCustomNotification.config.newsletterShowNameInput') %}
                             <div class="form-row">
                                 {% sw_include '@Storefront/storefront/element/cms-element-form/form-components/cms-element-form-input.html.twig'
                                     with {
@@ -51,7 +51,7 @@
                             </div>
                         {% endif %}
 
-                        {% sw_include '@Storefront/storefront/component/captcha/base.html.twig' with { 'captchas': shopware.config.core.basicInformation.activeCaptchas } %}
+                        {% sw_include '@Storefront/storefront/component/captcha/base.html.twig' with { 'captchas': config('core.basicInformation.activeCaptchas') } %}
                         {% sw_include '@Storefront/storefront/element/cms-element-form/form-components/cms-element-form-privacy.html.twig' %}
                         {% sw_include '@Storefront/storefront/element/cms-element-form/form-components/cms-element-form-info-required.html.twig' %}
 
